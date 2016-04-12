@@ -1,0 +1,3163 @@
+{
+  "@type": "PagedActivityAlert",
+  "index": 0,
+  "limit": 100,
+  "count": 100,
+  "total": 186,
+  "activityAlert": [
+    {
+      "@id": 71274,
+      "@status": "A",
+      "@type": "SpeedViolationActivityAlert",
+      "ownerId": 39652,
+      "subject": "FastAndFurious2",
+      "description": "Manav's Speed Alert for Vehicles",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-08T23:38:50Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-08T23:41:49Z"
+      },
+      "vehicleSpeed": 1,
+      "duration": 5
+    },
+    {
+      "@id": 71273,
+      "@status": "A",
+      "@type": "SpeedViolationActivityAlert",
+      "ownerId": 39652,
+      "subject": "FastAndFurious",
+      "description": "Manav's Speed Alert",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-08T21:18:39Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-08T23:08:09Z"
+      },
+      "basedOnPostedSpeeds": {
+        "excessSpeed": 1
+      },
+      "duration": 5
+    },
+    {
+      "@id": 71048,
+      "@status": "A",
+      "@type": "OddHoursActivityAlert",
+      "ownerId": 104312,
+      "subject": "20160303  ZAVALZA TRUCKING NO. 54",
+      "description": "20160303  ZAVALZA TRUCKING NO. 54",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 2,
+          "startMinute": 0,
+          "endHour": 21,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-03T22:22:36Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-03-03T22:22:36Z"
+      }
+    },
+    {
+      "@id": 70591,
+      "@status": "A",
+      "@type": "OddHoursActivityAlert",
+      "ownerId": 39652,
+      "subject": "additionalemail2",
+      "description": "DELETE ME",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 22,
+          "startMinute": 0,
+          "endHour": 5,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-23T16:47:36Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-23T16:47:36Z"
+      }
+    },
+    {
+      "@id": 70590,
+      "@status": "A",
+      "@type": "OddHoursActivityAlert",
+      "ownerId": 39652,
+      "subject": "additionalemail",
+      "description": "DELETE ME",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 22,
+          "startMinute": 0,
+          "endHour": 5,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-23T16:45:32Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-23T16:45:32Z"
+      }
+    },
+    {
+      "@id": 70054,
+      "@status": "A",
+      "@type": "OddHoursActivityAlert",
+      "ownerId": 104312,
+      "subject": "20160210 Odd Hours",
+      "description": "Triggered alerts",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 5,
+          "startMinute": 0,
+          "endHour": 19,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-10T18:58:46Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-10T18:59:27Z"
+      }
+    },
+    {
+      "@id": 70018,
+      "@status": "A",
+      "@type": "DTCActivityAlert",
+      "ownerId": 104312,
+      "subject": "20160208130811 AKUBELA",
+      "description": "NextGenMobileTest",
+      "maxNumberOfNotifications": 1,
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-08T21:09:22Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-08T21:09:22Z"
+      }
+    },
+    {
+      "@id": 69901,
+      "@status": "I",
+      "@type": "HBHAActivityAlert",
+      "ownerId": 39652,
+      "subject": "Alvin HBHA test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-05T14:30:51Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-08T17:56:32Z"
+      },
+      "type": "Both",
+      "minBrakingPercent": 0,
+      "minAccelPercent": 0
+    },
+    {
+      "@id": 69867,
+      "@status": "A",
+      "@type": "HBHAActivityAlert",
+      "ownerId": 113030,
+      "subject": "ag_Hard Braking/Acceleration Alert",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-05T02:48:53Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2016-02-05T02:48:53Z"
+      },
+      "type": "Both",
+      "minBrakingPercent": 10,
+      "minAccelPercent": 10
+    },
+    {
+      "@id": 43328,
+      "@status": "A",
+      "@type": "LostPowerActivityAlert",
+      "ownerId": 39652,
+      "subject": "6000 LPA",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2015-01-08T16:28:24Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      }
+    },
+    {
+      "@id": 42394,
+      "@status": "A",
+      "@type": "MaintenanceActivityAlert",
+      "ownerId": 39652,
+      "subject": "009 srv",
+      "description": "wdf",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-30T22:17:21Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "daysThreshold": 1,
+      "daysNotifyThreshold": 0,
+      "engineHoursThreshold": 0,
+      "engineHoursNotifyThreshold": 0,
+      "odometerThreshold": 0,
+      "odometerNotifyThreshold": 0
+    },
+    {
+      "@id": 42327,
+      "@status": "A",
+      "@type": "DTCActivityAlert",
+      "ownerId": 39652,
+      "subject": "Teri's DTC Alert",
+     "description": "Teri's DTC Alert",
+      "maxNumberOfNotifications": 1,
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-28T08:57:40Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      }
+    },
+    {
+      "@id": 41774,
+      "@status": "A",
+      "@type": "IdleTimeActivityAlert",
+      "ownerId": 100322,
+      "subject": "ITA",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-12T21:46:46Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-12T21:46:46Z"
+      },
+      "duration": 1
+    },
+    {
+      "@id": 41731,
+      "@status": "A",
+      "@type": "DTCActivityAlert",
+      "ownerId": 100322,
+      "subject": "DTC",
+      "maxNumberOfNotifications": 1,
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-10T23:36:57Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-10T23:36:57Z"
+      }
+    },
+    {
+      "@id": 41730,
+      "@status": "A",
+      "@type": "GeofenceActivityAlert",
+      "ownerId": 100322,
+      "subject": "HCW",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-10T22:29:13Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-10T22:29:13Z"
+      },
+      "geofenceId": 36475735,
+      "geofenceType": "EXCLUSION"
+    },
+    {
+      "@id": 41698,
+      "@status": "A",
+      "@type": "DTCActivityAlert",
+      "ownerId": 39652,
+      "subject": "NWF-2000 Test",
+      "description": "Alert to test NWF-2000",
+      "maxNumberOfNotifications": 1,
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-12-09T20:07:21Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      }
+    },
+    {
+      "@id": 40830,
+      "@status": "A",
+      "@type": "DTCActivityAlert",
+      "ownerId": 39652,
+      "subject": "6000 DTC",
+      "maxNumberOfNotifications": 1,
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-11-26T20:44:40Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      }
+    },
+    {
+      "@id": 40829,
+      "@status": "A",
+      "@type": "MaintenanceActivityAlert",
+      "ownerId": 39652,
+      "subject": "6000 Service Alert",
+      "maxNumberOfNotifications": 3,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-11-26T20:38:06Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "daysThreshold": 0,
+      "daysNotifyThreshold": 0,
+      "engineHoursThreshold": 0,
+      "engineHoursNotifyThreshold": 0,
+      "odometerThreshold": 0.5,
+      "odometerNotifyThreshold": 1
+    },
+    {
+      "@id": 38941,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "[DLA] - Speed",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-11-03T20:13:23Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 38940,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "[DLA] - Time",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-11-03T20:13:01Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 37122,
+      "@status": "A",
+      "@type": "MaintenanceActivityAlert",
+      "ownerId": 39652,
+      "subject": "Me try ENGHR aLeRt",
+      "description": "testing 30473",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-10-03T17:56:03Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "daysThreshold": 0,
+      "daysNotifyThreshold": 0,
+      "engineHoursThreshold": 2,
+      "engineHoursNotifyThreshold": 1,
+      "odometerThreshold": 0,
+      "odometerNotifyThreshold": 0
+    },
+    {
+      "@id": 36364,
+      "@status": "A",
+      "@type": "SpeedViolationActivityAlert",
+      "ownerId": 39652,
+      "subject": "Bejoy_Test1",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-09-19T22:57:04Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "vehicleSpeed": 5,
+      "duration": 5
+    },
+    {
+      "@id": 34556,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 113",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:39Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34555,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 112",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:38Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34554,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 108",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:33Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34553,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 107",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:32Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34552,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 106",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 2
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:32Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34551,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 105",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:31Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34550,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 104",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:31Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34549,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 103",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:30Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34548,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 097",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:23Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34547,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 095",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:22Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34546,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 090",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:19Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34545,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 088",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:18Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34544,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 079",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 5
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:12Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34543,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 078",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 0
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:11Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34542,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 073",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:08Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34541,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 070",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "N",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:07Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34540,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 069",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "W",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:06Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34539,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 061",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:02Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34538,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 060",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:17:01Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34537,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 043",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 23,
+          "startMinute": 0,
+          "endHour": 22,
+          "endMinute": 50,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:52Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34536,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 042",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 22,
+          "startMinute": 50,
+          "endHour": 23,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:51Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34535,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 040",
+      "description": "Test",
+      "maxNumberOfNotifications": 0,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:50Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34534,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 037",
+      "description": "Test",
+      "maxNumberOfNotifications": 10,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:48Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34533,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 036",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:48Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34532,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 034",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:46Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34531,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 033",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:46Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34530,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 032",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:45Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34529,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 031",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:45Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34528,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 030",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:44Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34527,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 029",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:44Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34526,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 028",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:43Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34525,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 027",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:43Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34524,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 026",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:42Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34523,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 025",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:42Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34522,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 024",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:41Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34521,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 023",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:41Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34520,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 022",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:40Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34519,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 021",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:40Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34518,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 012",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:31Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34517,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 011",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:31Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34514,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 006",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:28Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34513,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 43986,
+      "subject": "AUG Driver Time 005",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:27Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:27Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34512,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Time 001",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:22Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34511,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 114",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:21Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34510,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 113",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:21Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34509,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 112",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:20Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34508,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 108",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:15Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34507,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 107",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:14Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34506,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 106",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:13Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34505,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 105",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:13Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34504,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 104",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:12Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34503,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 100",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:10Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34502,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 097",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:08Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34501,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 095",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:07Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34500,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 090",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:01Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34499,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 088",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:16:00Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34498,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 079",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 5
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:55Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34497,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 078",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 0
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:54Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34496,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 073",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:52Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34495,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 070",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "N",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:51Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34494,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 069",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 8
+        }
+      ],
+      "priority": "W",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:50Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34493,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 061",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 9
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:45Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34492,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 060",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:45Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34491,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 043",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 23,
+          "startMinute": 0,
+          "endHour": 22,
+          "endMinute": 50,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:32Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34490,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 042",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 22,
+          "startMinute": 50,
+          "endHour": 23,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:31Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34489,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 040",
+      "description": "Test",
+      "maxNumberOfNotifications": 0,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:30Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34488,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 037",
+      "description": "Test",
+      "maxNumberOfNotifications": 10,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:28Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34487,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 036",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:28Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34486,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 034",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:27Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34485,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 033",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:26Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34484,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 032",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:26Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34483,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 031",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:25Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34482,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 030",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:25Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34481,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 029",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:24Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34480,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 028",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:23Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34479,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 027",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:23Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34478,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 026",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:22Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    },
+    {
+      "@id": 34477,
+      "@status": "A",
+      "@type": "DriverLoginAlert",
+      "ownerId": 39652,
+      "subject": "AUG Driver Speed 025",
+      "description": "Test",
+      "maxNumberOfNotifications": 1,
+      "timeWindow": [
+        {
+          "startHour": 0,
+          "startMinute": 0,
+          "endHour": 0,
+          "endMinute": 0,
+          "day": 0
+        }
+      ],
+      "priority": "C",
+      "notificationInterval": {
+        "@unit": "H",
+        "value": 1
+      },
+      "createdTimestamp": {
+        "@readOnly": true,
+        "value": "2014-08-26T17:15:22Z"
+      },
+      "modifiedTimestamp": {
+        "@readOnly": true,
+        "value": "2015-11-03T16:52:22Z"
+      },
+      "violationType": "ET"
+    }
+  ]
+}

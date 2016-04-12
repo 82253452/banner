@@ -1,0 +1,58 @@
+group 'banner'
+version '1.0-SNAPSHOT'
+apply plugin: 'java'
+
+configurations {
+    providedCompile
+    provided.all*.exclude group: 'javax.servlet'
+}
+sourceSets {
+    main {
+        resources.srcDirs = ['src/main/resources']
+    }
+}
+    repositories {
+        mavenCentral()
+        maven{
+            url 'http://repo.spring.io/milestone'
+        }
+    }
+    dependencies {
+        ext.jarTree = fileTree(dir: 'lib', include: '*.jar')
+
+        compile 'org.springframework.boot:spring-boot-starter-web:1.3.3.RELEASE'
+        compile 'org.springframework.boot:spring-boot-starter-jdbc:1.3.3.RELEASE'
+        compile 'org.springframework.boot:spring-boot-starter-aop:1.3.3.RELEASE'
+        compile 'org.springframework.boot:spring-boot-starter-web:1.3.3.RELEASE'
+        compile 'org.springframework.boot:spring-boot-starter-tomcat'
+        compile("org.springframework.boot:spring-boot-devtools:1.3.0.M3")
+        compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+        compile 'javax.servlet:servlet-api:2.5'
+
+        compile 'mysql:mysql-connector-java:5.1.38'
+        compile 'org.apache.httpcomponents:httpclient:4.5.1'
+        compile 'org.apache.httpcomponents:httpmime:4.3.5'
+        compile 'org.apache.httpcomponents:fluent-hc:4.3.4'
+        compile 'com.alibaba:druid:1.0.11'
+        compile 'org.mybatis:mybatis:3.3.1'
+        compile 'org.mybatis:mybatis-spring:1.2.4'
+        compile 'com.github.pagehelper:pagehelper:4.1.1'
+        compile 'tk.mybatis:mapper:3.3.6'
+        compile 'com.github.ansell.property-util:property-util:0.4'
+        compile 'net.sf.json-lib:json-lib:2.4:jdk15'
+        compile 'javax.servlet:servlet-api:2.5'
+        compile 'org.quartz-scheduler:quartz:2.2.1'
+        compile 'org.apache.commons:commons-lang3:3.4'
+        compile 'com.alibaba:fastjson:1.2.8'
+        compile 'org.jsoup:jsoup:1.8.3'
+        compile 'xom:xom:1.2.5'
+
+        providedCompile files("${System.env['java_home']}/../jre/lib/rt.jar")
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+        compile jarTree
+    }
+tasks.withType(JavaCompile) { options.encoding = "UTF-8" }
+task hello << {
+    println "the current task name is ${System.env['java_home']}/../"
+    println "hello world"
+}

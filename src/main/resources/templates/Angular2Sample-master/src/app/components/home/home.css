@@ -1,0 +1,24 @@
+#table_alertInfo{
+    min-width: 90%;
+    margin : auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    }
+
+#table_alertInfo th{
+    background: dimgray;
+    color: white;
+}
+
+#table_alertInfo td{
+    padding-left: 0.75em !important;
+    padding-top: 0.75em !important;
+    padding-bottom: 0.75em !important;
+    
+}
+#table_alertInfo tr:nth-child(even) td{
+    background: lightgrey;
+}
+#table_alertInfo tr:nth-child(odd) td{
+    background: white;
+}
