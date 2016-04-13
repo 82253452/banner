@@ -59,7 +59,7 @@ public class WechatListener implements ServletContextListener {
         if(time!=null&&!"".equals(time)){
             String times[]=time.split(":");
             String cronExp="";
-            for(int i=times.length;i>=0;i--){
+            for(int i=times.length-1;i>=0;i--){
                 cronExp+=times[i]+" ";
             }
             return cronExp+="* * ?";
