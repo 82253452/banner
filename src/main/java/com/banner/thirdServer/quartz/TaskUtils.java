@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -31,7 +32,7 @@ public class TaskUtils {
             //获取trigger，即在spring配置文件中定义的 bean id="myTrigger"
             CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
             if (null == trigger) {
-                JobDetail jobDetail = JobBuilder.newJob(QuartzJobFactory.class)
+                JobDetail jobDetail = JobBuilder.newJob(cls)
                         .withIdentity(job.getJobName(), job.getJobGroup()).build();
                 //表达式调度构建器
                 CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job
@@ -43,6 +44,44 @@ public class TaskUtils {
                 //按新的trigger重新设置job执行
                 scheduler.rescheduleJob(triggerKey, trigger);
             }else{
+                // Trigger已存在，那么更新相应的定时设置
+                //表达式调度构建器
+                CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job
+                        .getCronExpression());
+                //按新的cronExpression表达式重新构建trigger
+                trigger = trigger.getTriggerBuilder().withIdentity(triggerKey)
+                        .withSchedule(scheduleBuilder).build();
+                //按新的trigger重新设置job执行
+                scheduler.rescheduleJob(triggerKey, trigger);
+            }
+            if(!scheduler.isShutdown()){
+                scheduler.start();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public  void addJob(ScheduleJob job,Class cls,Map<String,Object> dataMap) {
+        try {
+            Scheduler scheduler = schedulerFactoryBean.getScheduler();
+            TriggerKey triggerKey = TriggerKey.triggerKey(job.getJobName(), job.getJobGroup());
+            //获取trigger，即在spring配置文件中定义的 bean id="myTrigger"
+            CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
+            if (null == trigger) {
+                JobDetail jobDetail = JobBuilder.newJob(cls)
+                        .withIdentity(job.getJobName(), job.getJobGroup()).build();
+                jobDetail.getJobDataMap().put("dataMap",dataMap);
+                //表达式调度构建器
+                CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job
+                        .getCronExpression());
+                // 触发器
+                trigger = TriggerBuilder.newTrigger().withIdentity(job.getJobName(), job.getJobGroup()).withSchedule(scheduleBuilder).build();
+
+                scheduler.scheduleJob(jobDetail,trigger);
+                //按新的trigger重新设置job执行
+                scheduler.rescheduleJob(triggerKey, trigger);
+            }else{
+                trigger.getJobDataMap().put("dataMap",dataMap);
                 // Trigger已存在，那么更新相应的定时设置
                 //表达式调度构建器
                 CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(job

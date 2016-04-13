@@ -8,7 +8,7 @@ import java.io.Serializable;
  * Created by admin on 2016/4/9.
  */
 @Table(name = "ly_we_info")
-public class Wechat  extends BaseEntity implements Serializable {
+public class Wechat  extends BaseEntity{
     @Column(name="appId")
     private String appId;
     @Column(name="Secret")
@@ -19,6 +19,8 @@ public class Wechat  extends BaseEntity implements Serializable {
     private String startime;
     @Column(name="state")
     private String state;
+
+    private String num;
 
     public String getAppId() {
         return appId;
@@ -58,5 +60,12 @@ public class Wechat  extends BaseEntity implements Serializable {
 
     public void setState(String state) {
         this.state = state;
+    }
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
     }
 }
