@@ -45,6 +45,7 @@ public class WechatListener implements ServletContextListener {
             job.setCronExpression(parseCronExperssion(w.getString("startime")));
             job.setDesc("系统导入定时");
             dataMap.put("url",w.getString("url"));
+            dataMap.put("num",w.getString("num"));
             taskUtils.addJob(job, WechatTaskFactory.class,dataMap);
             logger.info("jobId:"+job.getJobId()+"jobCronExp"+job.getCronExpression()+"jobName"+job.getJobName()+"jobGroup"+job.getJobGroup());
         }

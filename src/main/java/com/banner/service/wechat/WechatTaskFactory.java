@@ -3,6 +3,7 @@ package com.banner.service.wechat;
 import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.wechat.wechat4j.common.MediaTextPic;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.Job;
@@ -26,16 +27,18 @@ public class WechatTaskFactory implements Job {
             try {
                 List list=NetSpider.parseHTMLHrefs(dataMap.get("url").toString(),Integer.valueOf(dataMap.get("num").toString()));
                 MediaTextPic mediaTextPic=new MediaTextPic();
-                String mediaId=mediaTextPic.upload(JSONArray.fromObject(list).toString());
+                JSONObject jsonObject=new JSONObject();
+                jsonObject.put("articles",JSONArray.fromObject(list).toString());
+                String mediaId=mediaTextPic.upload(jsonObject.toString());
                 if(mediaId!=null){
                     logger.info("上传图文素材成功 mediaId:"+mediaId);
                 }else{
-                    logger.info("上传图文素材成功失败");
+                    logger.info("上传图文素材失败");
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            logger.info("url :"+dataMap.get("url").toString()+"article num :"+dataMap.get("url").toString());
+            logger.info("url :"+dataMap.get("url").toString()+"article num :"+dataMap.get("num").toString());
         }
     }
 }
