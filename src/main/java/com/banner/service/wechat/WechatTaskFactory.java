@@ -2,6 +2,7 @@ package com.banner.service.wechat;
 
 import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.wechat.wechat4j.common.MediaTextPic;
+import com.banner.thirdServer.wechat.wechat4j.message.MassMsg;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
@@ -32,6 +33,9 @@ public class WechatTaskFactory implements Job {
                 String mediaId=mediaTextPic.upload(jsonObject.toString());
                 if(mediaId!=null){
                     logger.info("上传图文素材成功 mediaId:"+mediaId);
+                    MassMsg massMsg=new MassMsg(mediaId);
+                    String result=massMsg.send();
+                    logger.info(result);
                 }else{
                     logger.info("上传图文素材失败");
                 }

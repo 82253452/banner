@@ -11,7 +11,7 @@ import net.sf.json.JSONObject;
 public class MassMsg {
     private static final String URL="https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token=";
     private String media_id;
-    MassMsg(String media_id){
+    public MassMsg(String media_id){
         this.media_id=media_id;
     }
     public String send(){
