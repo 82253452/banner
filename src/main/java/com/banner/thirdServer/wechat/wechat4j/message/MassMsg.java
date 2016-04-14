@@ -21,13 +21,13 @@ public class MassMsg {
     private String getParamData(String media_id){
         JSONObject jsonObject=new JSONObject();
         JSONObject filter=new JSONObject();
-        JSONObject mpnews=new JSONObject();
+        JSONObject media=new JSONObject();
 
         filter.put("is_to_all",true);
-        mpnews.put("media_id",media_id);
+        media.put("media_id",media_id);
         jsonObject.put("filter",filter);
-        jsonObject.put("mpnews",mpnews);
-        jsonObject.put("msgtype",mpnews);
+        jsonObject.put("mpnews",media);
+        jsonObject.put("msgtype","mpnews");
         return jsonObject.toString();
     }
 
