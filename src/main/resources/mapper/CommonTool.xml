@@ -20,6 +20,7 @@
 		  information_schema.tables t
 		  LEFT JOIN Information_schema.columns c ON t.table_name=c.table_name
 		  WHERE t.table_SCHEMA=#{dbName}
+		  and c.table_SCHEMA=#{dbName}
 	</select>
 	
 </mapper>

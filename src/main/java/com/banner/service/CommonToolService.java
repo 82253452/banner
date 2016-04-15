@@ -37,6 +37,7 @@ public class CommonToolService{
 		}
 		for(Map.Entry entry:result.entrySet()){
 			TableBean tableBean=new TableBean(entry.getKey().toString(),CommonUtil.getJavaName2(entry.getKey().toString()),"generator","yp","");
+			tableBean.setColumnList((List<ColumnBean>) entry.getValue());
 			render.add(tableBean);
 		}
 		return render;
