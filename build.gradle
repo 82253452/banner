@@ -67,7 +67,6 @@ sourceSets {
         compile 'org.jsoup:jsoup:1.8.3'
         compile 'xom:xom:1.2.5'
 
-        providedCompile files("${System.env['java_home']}/../jre/lib/rt.jar")
         testCompile group: 'junit', name: 'junit', version: '4.11'
         compile jarTree
     }
