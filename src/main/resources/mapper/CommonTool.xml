@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
-<mapper namespace="com.dmw.server.base.dao.CommonToolDao">
+<mapper namespace="com.banner.mapper.CommonToolMapper">
 	
     <select id="getColumns" parameterType="java.lang.String"  resultType="java.util.HashMap">
-		<!-- SELECT t1.column_name as columnName,
-			   t1.data_type  as dataType, 
-			   t2.comments as columnComment 
-		FROM user_tab_columns t1
-			left join user_col_comments t2 on t1.table_name = t2.table_name and t1.column_name = t2.column_name 
-		WHERE t1.table_Name = #{tableName} -->
-		
-		
 		SELECT column_name as columnName,
 			   data_type  as dataType, 
 			   column_comment as columnComment 
 		FROM Information_schema.columns 
-		WHERE table_Name = 'user'
-		
+		WHERE table_Name = #{tableName}
+	</select>
+
+	<select id="getAllTables" parameterType="java.lang.String"  resultType="com.banner.generator.util.DbBean">
+		SELECT
+		  t.table_name AS tableName,
+		  c.column_name AS columnName,
+		  c.data_type  AS dataType,
+		  c.column_comment AS columnComment
+		FROM
+		  information_schema.tables t
+		  LEFT JOIN Information_schema.columns c ON t.table_name=c.table_name
+		  WHERE t.table_SCHEMA=#{dbName}
+		  and c.table_SCHEMA=#{dbName}
 	</select>
 	
 </mapper>
