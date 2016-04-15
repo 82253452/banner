@@ -1,6 +1,8 @@
 package com.banner.generator.util;
 
 
+import freemarker.template.Configuration;
+import freemarker.template.Template;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
@@ -58,7 +60,7 @@ public class CommonUtil {
      * @param saveFilePath
      * @throws Exception
      */
-    /*public static void createTemplate(String projectPath,String ftlName,TableBean tb,String saveFilePath)throws Exception{
+    public static void createTemplate(String projectPath,String ftlName,TableBean tb,String saveFilePath)throws Exception{
     	// 获取文件分隔符
         String separator = File.separator;
         System.out.println("Project Path: "+ projectPath);
@@ -74,5 +76,5 @@ public class CommonUtil {
         String content = FreeMarkers.renderTemplate(template, tb);
         System.out.println("file Path: "+ saveFilePath);
         FileUtils.writeFile(content, saveFilePath);
-    }*/
+    }
 }
