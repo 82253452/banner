@@ -4,13 +4,13 @@ package com.banner.generator.util;
  * Created by Administrator on 2016/4/15 0015.
  */
 public class DbBean {
-    //Êı¾İ¿âÃû³Æ
+    //æ•°æ®åº“åç§°
     String tableName;
-    //×Ö¶ÎÃû³Æ
+    //å­—æ®µåç§°
     String columnName;
-    //ÀàĞÍ
+    //ç±»å‹
     String dataType;
-    //ÃèÊö
+    //æè¿°
     String columnComment;
 
     public String getTableName() {

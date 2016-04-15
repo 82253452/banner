@@ -21,6 +21,7 @@ import java.io.StringWriter;
  * @author ChengNing
  * @date   2014年12月7日
  */
+@SuppressWarnings("unchecked")
 public class JaxbParser {
 
 	private static Logger logger = Logger.getLogger(JaxbParser.class);
