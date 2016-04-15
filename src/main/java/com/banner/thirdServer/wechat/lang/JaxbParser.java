@@ -5,8 +5,8 @@ package com.banner.thirdServer.wechat.lang;
 
 import com.sun.org.apache.xml.internal.serialize.OutputFormat;
 import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import org.apache.log4j.Logger;
+import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -57,7 +57,7 @@ public class JaxbParser {
 			m.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			m.setProperty(Marshaller.JAXB_FRAGMENT, true);// 去掉报文头
-		    OutputStream os = new ByteOutputStream();
+		    OutputStream os = new ByteArrayOutputStream();
 			StringWriter writer = new StringWriter();
 			XMLSerializer serializer = getXMLSerializer(os);
 			m.marshal(obj, serializer.asContentHandler());
