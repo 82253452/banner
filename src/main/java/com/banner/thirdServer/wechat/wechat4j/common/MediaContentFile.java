@@ -10,6 +10,11 @@ import java.io.File;
  * Created by admin on 2016/4/9.
  */
 public class MediaContentFile extends CommonMedia{
+
+    public MediaContentFile(String appId){
+        super.appId=appId;
+    }
+
     public String upload(File file,MediaType type){
         super.UPLOAD = "https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token=";//素材不占用永久空间
         this.file = file;

@@ -37,13 +37,15 @@ public class MediaFile extends CommonMedia{
 	 * error:   {"errcode":40004,"errmsg":"invalid media type"}
 	 * @return  media_id  成功返回 media_id, 失败返回null
 	 */
-
+	public MediaFile(String appId){
+		super.appId=appId;
+	}
 	public String upload(File file,MediaType type){
 		super.UPLOAD = "http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token=";//临时素材
 		this.file = file;
 		this.type = type;
 		String url = uploadUrl();
-		String result = HttpUtils.postFile(url+ TokenProxy.accessToken(), PARAM_FILE, file);
+		String result = HttpUtils.postFile(url+ getToken(), PARAM_FILE, file);
 		parseUploadResult(result);
 		if(StringUtils.isNotBlank(this.mediaId))
 			return this.mediaId;

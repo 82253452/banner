@@ -15,7 +15,7 @@ public class CommonUtil {
 	 * @return
 	 */
 	public static String getJavaName(String columnName){  	 
-    	String [] columnSplit = columnName.toLowerCase().split("_");
+    	String [] columnSplit = columnName.split("_");
     	if(columnSplit.length==1){
     		return columnSplit[0];
     	}else{
@@ -34,7 +34,7 @@ public class CommonUtil {
      * @return
      */
     public static String getJavaName2(String columnName){  	 
-    	String [] columnSplit = columnName.toLowerCase().split("_");
+    	String [] columnSplit = columnName.split("_");
 		StringBuffer nameStr = new StringBuffer("");
 		for(int i=0; i<columnSplit.length ;i++ ){
     		nameStr.append(toUpperCaseFirstOne(columnSplit[i]));
@@ -57,24 +57,33 @@ public class CommonUtil {
      * @param projectPath
      * @param ftlName
      * @param tb
-     * @param saveFilePath
+     * @param template
      * @throws Exception
      */
-    public static void createTemplate(String projectPath,String ftlName,TableBean tb,String saveFilePath)throws Exception{
+    public static void createTemplate(String projectPath,String method,String ftlName,TableBean tb,String template,String saveFilePath,String fileType)throws Exception{
     	// 获取文件分隔符
         String separator = File.separator;
-        System.out.println("Project Path: "+ projectPath);
     	// 模板文件路径
-        String tplPath = StringUtils.replace(projectPath + "/src/main/java/com/dmw/boss/generate/template", "/", separator);
-        System.out.println("Template Path: "+tplPath);
-    	 // 代码模板配置
+        String tplPath = StringUtils.replace(projectPath+packageToPath(template), "/", separator);
+        // 保存文件路径
+        String savePath = StringUtils.replace(projectPath+packageToPath(saveFilePath)+separator, "/", separator);
+        //保存文件类型
+        String fileName=getSaveName(tb.getEntityName(), fileType);
+        // 代码模板配置
         Configuration cfg = new Configuration();
         cfg.setDefaultEncoding("UTF-8");
         cfg.setDirectoryForTemplateLoading(new File(tplPath));
     	// 生成 Entity
-        Template template = cfg.getTemplate(ftlName);
-        String content = FreeMarkers.renderTemplate(template, tb);
-        System.out.println("file Path: "+ saveFilePath);
-        FileUtils.writeFile(content, saveFilePath);
+        Template templateEntity = cfg.getTemplate(ftlName);
+        String content = FreeMarkers.renderTemplate(templateEntity, tb);
+        FileUtils.writeFile(content, savePath+fileName,method);
+    }
+    private static String packageToPath(String packages){
+        return StringUtils.replace(packages,".", File.separator);
+    }
+    private static String getSaveName(String name,String fileType){
+        //获取包第一个包名 如果是resources类型为xml 其他为JAVA
+            String fileName=StringUtils.replace(fileType,"*",name);
+            return fileName;
     }
 }

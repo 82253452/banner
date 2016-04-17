@@ -28,7 +28,7 @@ public class NetSpider {
     }
 
     //获取文章列表
-    public static List<GraMaterialEntity> parseHTMLHrefs(String url, Integer total) throws ParseException, IOException {
+    public static List<GraMaterialEntity> parseHTMLHrefs(String url, Integer total,String appId) throws ParseException, IOException {
         String html=HttpClientUtil.sendGetRequest(url, "GBK");
         List<GraMaterialEntity> list = new ArrayList<GraMaterialEntity>();
         Document doc = Jsoup.parse(html);
@@ -36,15 +36,15 @@ public class NetSpider {
         Elements lis = body.getElementsByClass("excerpt");
 
         ForkJoinPool forkJoinPool=new ForkJoinPool();
-        ParseArticleListTask parseArticleListTask=new ParseArticleListTask(lis,total);
+        ParseArticleListTask parseArticleListTask=new ParseArticleListTask(lis,total,appId);
         list= (List<GraMaterialEntity>) forkJoinPool.invoke(parseArticleListTask);
 
-        GetHrefContentTask getHrefContentTask=new GetHrefContentTask(list);
+        GetHrefContentTask getHrefContentTask=new GetHrefContentTask(list, appId);
         List<GraMaterialEntity> result= (List<GraMaterialEntity>) forkJoinPool.invoke(getHrefContentTask);//多线程解析文章内容
         return result;
     }
     //解析文章内容
-    public static String paseContentHTML(String html, String URL) throws ParseException, IOException {
+    public static String paseContentHTML(String html, String URL,String appId) throws ParseException, IOException {
         Document doc = Jsoup.parse(html);
         Element body = doc.body();
         Elements lis = body.getElementsByClass("article-content");
@@ -52,7 +52,7 @@ public class NetSpider {
         Element element = lis.get(0);
 
         ForkJoinPool forkJoinPool=new ForkJoinPool();
-        UploadMediaTask uploadMediaTask=new UploadMediaTask(lisImg);//多线程上传图片
+        UploadMediaTask uploadMediaTask=new UploadMediaTask(lisImg,appId);//多线程上传图片
         lisImg= forkJoinPool.invoke(uploadMediaTask);
         return element.html().replaceAll("&raquo;", "");
     }
@@ -65,7 +65,7 @@ public class NetSpider {
         return url;
     }
     public static void main(String args[]){
-        try {
+       /* try {
             List<GraMaterialEntity> list= parseHTMLHrefs("http://www.36634.com/jkcs/",2);
             JSONObject jsonObject=new JSONObject();
             jsonObject.put("articles", JSONArray.fromObject(list));
@@ -74,6 +74,6 @@ public class NetSpider {
             System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

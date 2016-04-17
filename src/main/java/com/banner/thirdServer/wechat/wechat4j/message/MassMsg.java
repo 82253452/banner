@@ -3,6 +3,7 @@ package com.banner.thirdServer.wechat.wechat4j.message;
 import com.alibaba.fastjson.JSON;
 import com.banner.thirdServer.wechat.lang.HttpUtils;
 import com.banner.thirdServer.wechat.wechat4j.token.TokenProxy;
+import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import net.sf.json.JSONObject;
 
 /**
@@ -11,8 +12,11 @@ import net.sf.json.JSONObject;
 public class MassMsg {
     private static final String URL="https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token=";
     private String media_id;
-    public MassMsg(String media_id){
+    private String appId;
+
+    public MassMsg(String media_id,String appId){
         this.media_id=media_id;
+        this.appId=appId;
     }
     public String send(){
         String result=HttpUtils.post(uploadUrl(),getParamData(media_id));
@@ -36,7 +40,7 @@ public class MassMsg {
      * @return
      */
     private String uploadUrl(){
-        String url = URL + TokenProxy.accessToken();
+        String url = URL + Tokens.tockenMap.get(appId);
         return url;
     }
     private String respon(String result){

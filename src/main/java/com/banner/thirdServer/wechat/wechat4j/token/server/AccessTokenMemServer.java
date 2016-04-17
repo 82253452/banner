@@ -21,9 +21,9 @@ public class AccessTokenMemServer implements IServer{
 
 	
 	private static AccessTokenMemServer tokenServer = new AccessTokenMemServer();
-	
+
 	private AccessToken accessToken = new AccessToken();
-	
+
 	private int requestTimes = 1;//token请求失败后重新请求的次数
 	
 	/**
@@ -61,7 +61,7 @@ public class AccessTokenMemServer implements IServer{
 	public String token(){
 		return accessToken().getToken();
 	}
-	
+
 	/**
 	 * 服务器刷新token
 	 */

@@ -2,7 +2,9 @@ package com.banner.thirdServer.wechat.wechat4j.common;
 
 import com.banner.thirdServer.wechat.lang.HttpUtils;
 import com.banner.thirdServer.wechat.wechat4j.token.TokenProxy;
+import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 
@@ -10,6 +12,7 @@ import java.io.*;
  * Created by admin on 2016/4/9.
  */
 public abstract class CommonMedia {
+    public final Logger logger = Logger.getLogger(CommonMedia.class);
     public    String UPLOAD = "";//临时素材
     public   String DOWNLOAD = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=";
     public   String PARAM_FILE = "media";
@@ -23,13 +26,14 @@ public abstract class CommonMedia {
     public String mediaId;  //3天失效
     public String createdTimestamp;//文件创建时间戳，上传之后返回
     public String url;//文件路径，上传永久素材之后返回
+    public String appId;
     abstract  String upload(File file,MediaType type);
     /**
      * 文件上传url
      * @return
      */
     protected String uploadUrl(){
-        String url = UPLOAD + TokenProxy.accessToken() + "&"
+        String url = UPLOAD + getToken() + "&"
                 + PARAM_TYPE + "=" + this.type.name();
         return url;
     }
@@ -38,7 +42,7 @@ public abstract class CommonMedia {
      * @return
      */
     protected String downloadUrl(){
-        String url = DOWNLOAD + TokenProxy.accessToken() + "&"
+        String url = DOWNLOAD + getToken() + "&"
                 + PARAM_MEDIA_ID + "=" + this.mediaId;
         return url;
     }
@@ -65,7 +69,9 @@ public abstract class CommonMedia {
             this.mediaId = null;
         }
     }
-
+    public String getToken(){
+        return Tokens.tockenMap.get(appId);
+    }
     /**
      * 文件下载
      * @return  byte[]

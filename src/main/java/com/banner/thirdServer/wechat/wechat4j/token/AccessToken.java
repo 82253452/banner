@@ -17,7 +17,7 @@ public class AccessToken extends Token {
 	
 	private static Logger logger = Logger.getLogger(AccessToken.class);
 	private static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential";
-	
+
 
 	@Override
 	protected String tokenName() {
@@ -40,6 +40,7 @@ public class AccessToken extends Token {
 		logger.info("创建获取access_token url");
 		return url;
 	}
-	
-	
+
+
+
 }

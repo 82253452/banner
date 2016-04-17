@@ -26,7 +26,7 @@ public class NetSpider {
         return HttpClientUtil.sendGetRequest("http://www.36634.com/jkcs/", "GBK");
     }
 
-    public static List<source> parseHTMLHrefs(String html, Integer total) throws ParseException, IOException {
+    public static List<source> parseHTMLHrefs(String html, Integer total,String appId) throws ParseException, IOException {
         List<source> list = new ArrayList<source>();
         //System.out.println(html);
         Document doc = Jsoup.parse(html);
@@ -40,7 +40,7 @@ public class NetSpider {
             String h2 = link.getElementsByTag("h2").get(0).getElementsByTag("a").html();
             String conLink = link.getElementsByTag("h2").get(0).getElementsByTag("a").get(0).attr("href");
             String author = link.getElementsByClass("muted").get(0).text();
-            String content = getContent(conLink);
+            String content = getContent(conLink,appId);
             source sour = new source();
             sour.setImgUrl(linkHref);
             sour.setTitle(h2);
@@ -60,15 +60,15 @@ public class NetSpider {
         return list;
     }
 
-    public static String getContent(String link) throws ParseException, IOException {
+    public static String getContent(String link,String appId) throws ParseException, IOException {
         if (link != null) {
             String contentHtml= HttpClientUtil.sendGetRequest(BaseURL + link, "gbk");
-            return paseContentHTML(contentHtml,"");
+            return paseContentHTML(contentHtml,"",appId);
         }
         return null;
     }
 
-    public static String paseContentHTML(String html, String URL) throws ParseException, IOException {
+    public static String paseContentHTML(String html, String URL,String appId) throws ParseException, IOException {
         Document doc = Jsoup.parse(html);
         Element body = doc.body();
         Elements lis = body.getElementsByClass("article-content");
@@ -79,19 +79,19 @@ public class NetSpider {
             if (!elementImg.attr("src").toString().substring(0, 4).toLowerCase().equals("http")) {
                 elementImg.attr("src", BaseURL + elementImg.attr("src"));
             }
-            MediaContentFile mediaContentFile = new MediaContentFile();
+            MediaContentFile mediaContentFile = new MediaContentFile(appId);
 
             return element.html().replaceAll("&raquo;", "");
         }
         return null;
     }
     public static void main(String args[]){
-        try {
+       /* try {
             List<source> list=  parseHTMLHrefs(getHtmlContent(),4);
             System.out.print("2133");
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 }

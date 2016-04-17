@@ -38,8 +38,11 @@ spring:
      #   cache: false
 quartz:
     enabled: true
-samplejob:
-    frequency: 2000
+generator:
+    method: create
+    template: java.com.banner.generator.template
+
+
 
 #以下属性不可用
 #mybatis:

@@ -18,12 +18,15 @@ public class ParseArticleListTask extends RecursiveTask {
     private Integer num;
     private Elements elements;
     private Element element;
-    ParseArticleListTask(Elements elements,Integer num){
+    private String appId;
+    ParseArticleListTask(Elements elements,Integer num,String appId){
         this.elements=elements;
         this.num=num;
+        this.appId=appId;
     }
-    ParseArticleListTask(Element element){
+    ParseArticleListTask(Element element,String appId){
         this.element=element;
+        this.appId=appId;
     }
     @Override
     protected Object compute() {
@@ -35,7 +38,7 @@ public class ParseArticleListTask extends RecursiveTask {
             String author = element.getElementsByClass("muted").get(0).text();
             GraMaterialEntity graMaterialEntity = new GraMaterialEntity();
             File file =CommonMedia.getUrlFile(linkHref,Config.instance().getTempImg()+UUIDGenarator.generateNumber()+".jpg");
-            MediaPerFile mediaFile=new MediaPerFile();
+            MediaPerFile mediaFile=new MediaPerFile(appId);
             String mediaId=mediaFile.upload(file, MediaType.image);
             graMaterialEntity.setThumb_media_id(mediaId);
             graMaterialEntity.setAuthor(author);
@@ -45,7 +48,7 @@ public class ParseArticleListTask extends RecursiveTask {
         }else{
             for(Element e:elements){
                 num--;
-                ParseArticleListTask parseArticleListTask=new ParseArticleListTask(e);
+                ParseArticleListTask parseArticleListTask=new ParseArticleListTask(e,appId);
                 parseArticleListTask.fork();
                 List<GraMaterialEntity> re= (List<GraMaterialEntity>) parseArticleListTask.join();
                 list.addAll(re);

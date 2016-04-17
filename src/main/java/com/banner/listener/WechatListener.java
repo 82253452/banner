@@ -4,10 +4,14 @@ import com.banner.mapper.WechatMapper;
 import com.banner.service.wechat.WechatTaskFactory;
 import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.quartz.TaskUtils;
+import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
+import com.banner.thirdServer.wechat.wechat4j.token.timer.TokenTaskFactory;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
+import sun.swing.StringUIClientPropertyKey;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletContextEvent;
@@ -28,7 +32,7 @@ public class WechatListener implements ServletContextListener {
     private WechatMapper wechatMapper;
     @Resource
     private TaskUtils taskUtils;
-
+    private static final String TOKEN_PREX="token_";
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         logger.info("开始添加定时器");
@@ -45,8 +49,23 @@ public class WechatListener implements ServletContextListener {
             job.setCronExpression(parseCronExperssion(w.getString("startime")));
             job.setDesc("系统导入定时");
             dataMap.put("url",w.getString("url"));
-            dataMap.put("num",w.getString("num"));
-            taskUtils.addJob(job, WechatTaskFactory.class,dataMap);
+            dataMap.put("num", w.getString("num"));
+            dataMap.put("appId",w.getString("appId"));
+            dataMap.put("secret", w.getString("secret"));
+            taskUtils.addJob(job, WechatTaskFactory.class, dataMap);
+           String tocken= new Tokens(w.getString("appId"),w.getString("secret")).install();
+            if(StringUtils.isNotBlank(tocken)){
+                job.setJobId(TOKEN_PREX+w.getString("id"));
+                job.setJobName(TOKEN_PREX + w.getString("appId"));
+                job.setJobGroup(TOKEN_PREX + w.getString("secret"));
+                job.setJobStatus("1");
+                job.setCronExpression("0 0 0/2 * * ?");
+                job.setDesc("Token定时");
+                dataMap.clear();
+                dataMap.put("appId",w.getString("appId"));
+                dataMap.put("secret", w.getString("secret"));
+                taskUtils.addJob(job, TokenTaskFactory.class, dataMap);
+            }
             logger.info("jobId:"+job.getJobId()+"jobCronExp"+job.getCronExpression()+"jobName"+job.getJobName()+"jobGroup"+job.getJobGroup());
         }
         logger.info("定时器完成");

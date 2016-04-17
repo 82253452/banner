@@ -24,18 +24,19 @@ public class WechatTaskFactory implements Job {
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
         Map<String,Object> dataMap = (Map<String, Object>) context.getMergedJobDataMap().get("dataMap");
-        if(dataMap!=null&&!"".equals(dataMap.get("url"))&&!"".equals(dataMap.get("num"))){
+        if(dataMap!=null&&!"".equals(dataMap.get("url").toString())&&!"".equals(dataMap.get("num").toString())){
+            String appId=dataMap.get("appId").toString();
             try {
-                List list=NetSpider.parseHTMLHrefs(dataMap.get("url").toString(),Integer.valueOf(dataMap.get("num").toString()));
-                MediaTextPic mediaTextPic=new MediaTextPic();
+                List list=NetSpider.parseHTMLHrefs(dataMap.get("url").toString(),Integer.valueOf(dataMap.get("num").toString()),appId);
+                MediaTextPic mediaTextPic=new MediaTextPic(appId);
                 JSONObject jsonObject=new JSONObject();
                 jsonObject.put("articles",JSONArray.fromObject(list).toString());
                 String mediaId=mediaTextPic.upload(jsonObject.toString());
                 if(mediaId!=null){
                     logger.info("上传图文素材成功 mediaId:"+mediaId);
-                    MassMsg massMsg=new MassMsg(mediaId);
+                    /*MassMsg massMsg=new MassMsg(mediaId,appId);
                     String result=massMsg.send();
-                    logger.info(result);
+                    logger.info("群发："+result);*/
                 }else{
                     logger.info("上传图文素材失败");
                 }

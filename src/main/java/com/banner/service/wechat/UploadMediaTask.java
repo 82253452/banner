@@ -16,18 +16,21 @@ import java.util.concurrent.RecursiveTask;
 public class UploadMediaTask extends RecursiveTask<Elements> {
     private Elements lisImg;
     private Element img;
-    UploadMediaTask(Elements lisImg){
+    private String appId;
+    UploadMediaTask(Elements lisImg,String appId){
+        this.appId=appId;
         this.lisImg=lisImg;
     }
-    UploadMediaTask(Element img){
+    UploadMediaTask(Element img,String appId){
         this.img=img;
+        this.appId=appId;
     }
     @Override
     protected Elements compute() {
         Elements result=new Elements();
         if(lisImg==null){
             File file =CommonMedia.getUrlFile(img.attr("src"),Config.instance().getTempImg()+UUIDGenarator.generateNumber()+".jpg");
-            MediaContentFile mediaContentFile = new MediaContentFile();
+            MediaContentFile mediaContentFile = new MediaContentFile(appId);
             String contentUrl = mediaContentFile.upload(file, MediaType.image);
             if (contentUrl == null) {
                 img.attr("src", "");
@@ -38,7 +41,7 @@ public class UploadMediaTask extends RecursiveTask<Elements> {
             result.add(img);
         }else{
             for(Element imgChild:lisImg){
-                UploadMediaTask contentTask=  new UploadMediaTask(imgChild);
+                UploadMediaTask contentTask=  new UploadMediaTask(imgChild,appId);
                 contentTask.fork();
                 Elements partImg=contentTask.join();
                 result.addAll(partImg);
