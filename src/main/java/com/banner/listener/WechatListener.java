@@ -1,17 +1,14 @@
 package com.banner.listener;
 
-import com.banner.mapper.WechatMapper;
+import com.banner.mapper.LyWeInfoMapper;
+import com.banner.model.LyWeInfo;
 import com.banner.service.wechat.WechatTaskFactory;
 import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.quartz.TaskUtils;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import com.banner.thirdServer.wechat.wechat4j.token.timer.TokenTaskFactory;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Service;
-import sun.swing.StringUIClientPropertyKey;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletContextEvent;
@@ -24,49 +21,46 @@ import java.util.Map;
 /**
  * Created by admin on 2016/4/13.
  */
+
 @WebListener
 public class WechatListener implements ServletContextListener {
     private static Logger logger = Logger.getLogger(WechatListener.class);
 
     @Resource
-    private WechatMapper wechatMapper;
+    private LyWeInfoMapper lyWeInfoMapper;
     @Resource
     private TaskUtils taskUtils;
     private static final String TOKEN_PREX="token_";
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         logger.info("开始添加定时器");
-        List wechatList=wechatMapper.selectAll();
-        JSONArray jsonArray=JSONArray.fromObject(wechatList);
+        List<LyWeInfo> wechatList=lyWeInfoMapper.selectAll();
         Map<String,Object> dataMap=new HashMap<String,Object>();
-        for(Object o:jsonArray){
-            JSONObject w=JSONObject.fromObject(o);
+        //添加发布微信任务
+        for(LyWeInfo w:wechatList){
             ScheduleJob job = new ScheduleJob();
-            job.setJobId(w.getString("id"));
-            job.setJobName(w.getString("appId"));
-            job.setJobGroup(w.getString("secret"));
+            job.setJobId(w.getId().toString());
+            job.setJobName(w.getAppId());
+            job.setJobGroup(w.getSecret());
             job.setJobStatus("1");
-            job.setCronExpression(parseCronExperssion(w.getString("startime")));
-            job.setDesc("系统导入定时");
-            dataMap.put("url",w.getString("url"));
-            dataMap.put("num", w.getString("num"));
-            dataMap.put("appId",w.getString("appId"));
-            dataMap.put("secret", w.getString("secret"));
+            job.setCronExpression(parseCronExperssion(w.getStartime()));
+            job.setDesc(w.getUrl());
             taskUtils.addJob(job, WechatTaskFactory.class, dataMap);
-           String tocken= new Tokens(w.getString("appId"),w.getString("secret")).install();
+            //tocken 定时器 2个小时执行一次
+            String tocken= new Tokens(w.getAppId(),w.getSecret()).install();
+            logger.info("jobId："+job.getJobId()+"jobCronExp："+job.getCronExpression()+"jobName："+job.getJobName()+"jobGroup："+job.getJobGroup());
             if(StringUtils.isNotBlank(tocken)){
-                job.setJobId(TOKEN_PREX+w.getString("id"));
-                job.setJobName(TOKEN_PREX + w.getString("appId"));
-                job.setJobGroup(TOKEN_PREX + w.getString("secret"));
-                job.setJobStatus("1");
-                job.setCronExpression("0 0 0/2 * * ?");
-                job.setDesc("Token定时");
-                dataMap.clear();
-                dataMap.put("appId",w.getString("appId"));
-                dataMap.put("secret", w.getString("secret"));
-                taskUtils.addJob(job, TokenTaskFactory.class, dataMap);
+                ScheduleJob jobToken = new ScheduleJob();
+                jobToken.setJobId(TOKEN_PREX+w.getId().toString());
+                jobToken.setJobName(TOKEN_PREX + w.getAppId());
+                jobToken.setJobGroup(TOKEN_PREX + w.getSecret());
+                jobToken.setJobStatus("1");
+                jobToken.setCronExpression("0 0 0/2 * * ?");
+                jobToken.setDesc("Token定时");
+                taskUtils.addJob(jobToken, TokenTaskFactory.class, dataMap);
+                logger.info("jobId:："+jobToken.getJobId()+"jobCronExp："+jobToken.getCronExpression()+"jobName："+jobToken.getJobName()+"jobGroup："+jobToken.getJobGroup());
+
             }
-            logger.info("jobId:"+job.getJobId()+"jobCronExp"+job.getCronExpression()+"jobName"+job.getJobName()+"jobGroup"+job.getJobGroup());
         }
         logger.info("定时器完成");
     }
@@ -87,3 +81,4 @@ public class WechatListener implements ServletContextListener {
         return "";
     }
 }
+

@@ -28,7 +28,7 @@ import java.util.concurrent.ForkJoinPool;
 @WebListener
 @ConfigurationProperties(locations = "classpath:generator.properties")
 class Generator implements ServletContextListener {
-    private static Logger logger = Logger.getLogger(WechatListener.class);
+    private static Logger logger = Logger.getLogger(Generator.class);
     @Autowired
     private CommonToolService commonToolService;
     @Value("${spring.datasource.url}")
