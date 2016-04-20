@@ -27,7 +27,7 @@ public class TokenTaskFactory implements Job {
             String appId=dataMap.get("appId").toString();
             String secret=dataMap.get("secret").toString();
                 new Tokens(appId,secret).install();
-                logger.info("¸üÐÂtoken £º"+appId);
+                logger.info("æ›´æ–°token ï¼š"+appId);
         }
     }
 }

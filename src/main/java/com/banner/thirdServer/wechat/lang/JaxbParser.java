@@ -102,6 +102,7 @@ public class JaxbParser {
 	 * @param os
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	private XMLSerializer getXMLSerializer(OutputStream os) {
         OutputFormat of = new OutputFormat();
         formatCDataTag();

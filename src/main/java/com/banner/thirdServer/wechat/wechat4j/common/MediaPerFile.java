@@ -1,7 +1,6 @@
 package com.banner.thirdServer.wechat.wechat4j.common;
 
 import com.banner.thirdServer.wechat.lang.HttpUtils;
-import com.banner.util.ImgCompress;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 
@@ -19,7 +18,7 @@ public class MediaPerFile extends CommonMedia{
     }
     public String upload(File file,MediaType type){
         super.UPLOAD = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=";//永久素材
-        this.file = imgCompress(file);
+        /*this.file = imgCompress(file);*/
         this.type = type;
         String url = uploadUrl();
         String result = HttpUtils.postFile(url, PARAM_FILE, file);
@@ -38,8 +37,8 @@ public class MediaPerFile extends CommonMedia{
                 logger.info("图片大小："+s);
                 if(s>1000){
                     logger.info("压缩图片");
-                    ImgCompress imgCompress=new ImgCompress(file);
-                    file=imgCompress.resize(500,500);
+                   /* ImgCompress imgCompress=new ImgCompress(file);
+                    file=imgCompress.resize(500,500);*/
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

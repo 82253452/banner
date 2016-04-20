@@ -22,7 +22,7 @@ public class MediaContentFile extends CommonMedia{
         String url = uploadUrl();
         String result = HttpUtils.postFile(url, PARAM_FILE, file);
         JSONObject jsonObject=JSONObject.fromObject(result);
-        if(StringUtils.isNotBlank(jsonObject.getString("url")))
+        if(jsonObject.get("url")!=null&&StringUtils.isNotBlank(jsonObject.getString("url")))
             return jsonObject.getString("url");
         return null;
 
