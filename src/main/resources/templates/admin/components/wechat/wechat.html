@@ -77,22 +77,22 @@
                 <h4 class="modal-title" id="myModalLabel">新建</h4>
             </div>
             <div class="modal-body">
-                <form role="form" id="form">
+                <form role="form" id="form" #wechat="ngForm" (ngSubmit)="add(wechat.value)">
                     <div class="form-group">
                         <label>appId</label>
-                        <input class="form-control" name="wechat.appId">
+                        <input class="form-control" type="text"  ngControl="wechat.appId" required>
                     </div>
                     <div class="form-group">
                         <label>Secret</label>
-                        <input class="form-control" name="wechat.Secret">
+                        <input class="form-control" ngControl="Secret" required>
                     </div>
                     <div class="form-group">
                         <label>域名</label>
-                        <input class="form-control" name="wechat.domain">
+                        <input class="form-control" ngControl="domain" required>
                     </div>
                     <div class="form-group">
                         <label>文章地址</label>
-                        <input class="form-control" name="wechat.url">
+                        <input class="form-control" ngControl="url" required>
                     </div>
                     <div class="form-group" >
                         <label>启动时间</label>
@@ -100,22 +100,22 @@
                             <div class="col-sm-6">
                                 <div class="input-group" >
                                     <div class="input-group-addon">时</div>
-                                    <input class="form-control" name="wechat.hour">
+                                    <input class="form-control" ngControl="hour" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="input-group" >
                                     <div class="input-group-addon">分</div>
-                                    <input class="form-control" name="wechat.minute">
+                                    <input class="form-control" ngControl="minute" required>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary">保存</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" (click)="add()">保存</button>
             </div>
         </div>
     </div>
