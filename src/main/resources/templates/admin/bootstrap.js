@@ -13,16 +13,25 @@ System.config({
   baseURL: '/templates/',
   map: {
     'angular2':'node_modules/angular2',
+    'ng2bootstrap':'node_modules/ng2-bootstrap',
+    'jquery': 'admin/lib',
     'rxjs' : 'node_modules/rxjs',
     'typescript' : 'node_modules/typescript/lib/typescript.js',
     'app': 'admin',
     'components': 'admin/components',
     'common': 'admin/common',
-    'service': 'admin/service'
+    'service': 'admin/service',
+    'moment':'node_modules/moment/moment.js'
   },
   packages: {
     rxjs:{
       defaultExtension: 'js'
+    },
+    ng2bootstrap:{
+      defaultExtension: 'js'
+    },
+    jquery:{
+      defaultExtension:'js'
     },
     components:{
       defaultExtension: 'ts'
@@ -37,6 +46,9 @@ System.config({
       defaultExtension: 'js'
     },
     angular2: {
+      defaultExtension: 'js'
+    },
+    moment:{
       defaultExtension: 'js'
     }
   }
