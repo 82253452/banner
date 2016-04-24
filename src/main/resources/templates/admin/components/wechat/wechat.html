@@ -18,7 +18,7 @@
                             <div class="col-sm-12">
                                 <div class="dataTables_length" id="dataTables-example_length">
                                     <label>
-                                        <button type="button" class="btn btn-outline btn-default" data-toggle="modal" data-target="#createModal">创建定时器</button>
+                                        <button type="button" class="btn btn-outline btn-default" (click)="create()">新建定时器</button>
                                     </label>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                    </tr>
                                    </thead>
                                    <tbody>
-                                   <tr class="even gradeC" *ngFor="#entity of wechatList">
+                                   <tr class="even gradeC" *ngFor="#entity of wechatList;#i = index">
                                        <td>
                                            {{entity.appId}}
                                        </td>
@@ -50,7 +50,8 @@
                                            {{entity.state}}
                                        </td>
                                        <td>
-                                           <button type="button" class="btn btn-outline btn-default">无</button>
+                                           <button type="button" class="btn btn-outline btn-default" (click)="update(i)">更新</button>
+                                           <button type="button" class="btn btn-outline btn-default" (click)="delete(i)">删除</button>
                                        </td>
                                    </tr>
                                    </tbody>
@@ -58,10 +59,13 @@
                            </div>
                        </div>
                        <div class="row">
-                           <div class="col-sm-6">
-                               <div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">Showing 1 to 10 of 32 entries</div>
+                           <div class="col-lg-6">
+                               <pre class="card card-block card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
                            </div>
-                           <div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#">Previous</a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">1</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">2</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">3</a></li><li class="paginate_button " aria-controls="dataTables-example" tabindex="0"><a href="#">4</a></li><li class="paginate_button next" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#">Next</a></li></ul></div></div>
+                           <div class="col-lg-6">
+                               <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize"
+                                           [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)"></pagination>
+                           </div>
                        </div>
                    </div>
                </div>
@@ -74,29 +78,30 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">新建</h4>
+                <h4 class="modal-title" id="myModalLabel">定时器</h4>
             </div>
             <div class="modal-body">
                 <form role="form" id="form" #wechat="ngForm" (ngSubmit)="add(wechat.value)">
                     <div class="form-group">
                         <label>appId</label>
-                        <input class="form-control" type="text"  ngControl="wechat.appId" required>
+                        <input class="form-control" [(ngModel)]="wechatInfo.appId" type="text"  ngControl="appId" required>
                     </div>
                     <div class="form-group">
                         <label>Secret</label>
-                        <input class="form-control" ngControl="Secret" required>
+                        <input class="form-control" [(ngModel)]="wechatInfo.secret" ngControl="secret" required>
                     </div>
                     <div class="form-group">
                         <label>域名</label>
-                        <input class="form-control" ngControl="domain" required>
+                        <input class="form-control" [(ngModel)]="wechatInfo.orgConn" ngControl="orgConn" required>
                     </div>
                     <div class="form-group">
                         <label>文章地址</label>
-                        <input class="form-control" ngControl="url" required>
+                        <input class="form-control" [(ngModel)]="wechatInfo.url" ngControl="url" required>
                     </div>
                     <div class="form-group" >
                         <label>启动时间</label>
-                        <div class="row">
+                        <!--<timepicker  [(ngModel)]="mytime" (change)="changed()" [hourStep]="hstep" [minuteStep]="mstep" [showMeridian]="false"></timepicker>-->
+                       <div class="row">
                             <div class="col-sm-6">
                                 <div class="input-group" >
                                     <div class="input-group-addon">时</div>
@@ -120,3 +125,4 @@
         </div>
     </div>
 </div>
+
