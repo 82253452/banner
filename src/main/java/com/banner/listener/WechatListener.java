@@ -69,16 +69,16 @@ public class WechatListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
 
     }
-    private String parseCronExperssion(String time){
-        if(time!=null&&!"".equals(time)){
-            String times[]=time.split(":");
-            String cronExp="";
-            for(int i=times.length-1;i>=0;i--){
-                cronExp+=times[i]+" ";
-            }
-            return cronExp+="* * ?";
+    public String parseCronExperssion(String time){
+        if (time == null || "".equals(time)) {
+            return "";
         }
-        return "";
+        String times[]=time.split(":");
+        String cronExp="";
+        for(int i=times.length-1;i>=0;i--){
+            cronExp+=times[i]+" ";
+        }
+        return cronExp+="* * ?";
     }
 }
 
