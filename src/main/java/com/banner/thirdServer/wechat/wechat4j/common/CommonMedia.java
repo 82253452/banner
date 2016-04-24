@@ -50,7 +50,12 @@ public abstract class CommonMedia {
         File file= new File(fileName);
         try {
             FileOutputStream out = new FileOutputStream(file);
-            out.write(HttpUtils.getFile(fileUrl));
+            byte[] outByte=HttpUtils.getFile(fileUrl);
+            if(outByte!=null){
+                out.write(outByte);
+            }else{
+                return null;
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

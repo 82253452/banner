@@ -1,26 +1,24 @@
 package com.banner.model;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
+import com.fasterxml.jackson.databind.deser.Deserializers;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * Created by admin on 2016/4/9.
  */
 @Table(name = "ly_we_info")
-public class Wechat  extends BaseEntity{
+public class Wechat extends BaseEntity{
     @Column(name="appId")
     private String appId;
     @Column(name="Secret")
     private String Secret;
-    @Column(name="url")
     private String url;
-    @Column(name="startime")
     private String startime;
-    @Column(name="state")
     private String state;
-
     private String num;
+
 
     public String getAppId() {
         return appId;

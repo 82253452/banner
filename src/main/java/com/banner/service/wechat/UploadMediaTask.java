@@ -30,6 +30,9 @@ public class UploadMediaTask extends RecursiveTask<Elements> {
         Elements result=new Elements();
         if(lisImg==null){
             File file =CommonMedia.getUrlFile(img.attr("src"),Config.instance().getTempImg()+UUIDGenarator.generateNumber()+".jpg");
+            if(file==null){
+                return result;
+            }
             MediaContentFile mediaContentFile = new MediaContentFile(appId);
             String contentUrl = mediaContentFile.upload(file, MediaType.image);
             if (contentUrl == null) {
