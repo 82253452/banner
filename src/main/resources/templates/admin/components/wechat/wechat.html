@@ -1,3 +1,4 @@
+<div id="page-wrapper">
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">微信定时器</h1>
@@ -73,9 +74,10 @@
        </div>
    </div>
 </div>
-<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding-top: 10%">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+</div>
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding-top: 10%;">
+    <div class="modal-dialog" role="wrapper-page" style="z-index:9999;">
+        <div class="modal-content" >
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">定时器</h4>
@@ -101,7 +103,7 @@
                     <div class="form-group" >
                         <label>启动时间</label>
                         <!--<timepicker  [(ngModel)]="mytime" (change)="changed()" [hourStep]="hstep" [minuteStep]="mstep" [showMeridian]="false"></timepicker>-->
-                       <div class="row">
+                        <div class="row">
                             <div class="col-sm-6">
                                 <div class="input-group" >
                                     <div class="input-group-addon">时</div>
@@ -125,4 +127,3 @@
         </div>
     </div>
 </div>
-

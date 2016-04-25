@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
 @Component({
-  selector: '#page-wrapper',
+  selector: 'wrapper-page',
   templateUrl: System.baseURL+'admin/components/wechat/wechat.html',
   providers: [LyWeInfoService,Common],
   directives: [FORM_DIRECTIVES,CORE_DIRECTIVES,ACCORDION_DIRECTIVES,Alert,PAGINATION_DIRECTIVES,Timepicker],
