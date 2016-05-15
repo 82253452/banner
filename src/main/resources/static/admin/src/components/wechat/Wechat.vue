@@ -84,7 +84,7 @@
                 <h4 class="modal-title" id="myModalLabel">定时器</h4>
             </div>
             <div class="modal-body">
-                <form role="form" id="form" #wechat="ngForm" @click="add(wechatInfo)">
+                <form role="form" id="form">
                     <input class="form-control" v-model="wechatInfo.id" type="hidden">
                     <div class="form-group">
                         <label>appId</label>
@@ -120,11 +120,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-primary">保存</button>
-                    </div>
                 </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button @click="add()" class="btn btn-primary">保存</button>
+                </div>
             </div>
         </div>
     </div>
@@ -141,7 +141,10 @@
                     appId:'',
                     secret:'',
                     orgConn:'',
-                    url:''
+                    url:'',
+                    startime:'',
+                    hour:'',
+                    minute:''
                 }
             }
         },
@@ -158,12 +161,16 @@
                         secret:'',
                         orgConn:'',
                         url:'',
-                        id:''
+                        id:'',
+                        startime:'',
+                        hour:'',
+                        minute:''
                 }
                 $('#createModal').modal('show')
             },
-            add(wechat){
-                wechat.startime=wechat.hour+":"+wechat.minute+":00";
+            add(){
+                let wechat=this.wechatInfo
+                wechat.startime=wechat.hour+":"+wechat.minute+":00"
                     LyWeInfoService.add(wechat,function (data) {
                         if(data==1){
                             $('#createModal').modal('hide')
@@ -171,16 +178,26 @@
                     })
             },
             update(i){
-                var data=this.wechatList[i]
+                let data=this.wechatList[i]
                 this.wechatInfo.appId=data.appId;
                 this.wechatInfo.secret=data.secret;
                 this.wechatInfo.orgConn=data.orgConn;
                 this.wechatInfo.url=data.url;
                 this.wechatInfo.id=data.id;
+                this.wechatInfo.startime=data.startime;
+                this.wechatInfo.hour=data.startime.split(':')[0];
+                this.wechatInfo.minute=data.startime.split(':')[1];
+                console.info(this.wechatInfo)
                 $('#createModal').modal('show')
             },
             delete(i){
-                this.wechatInfo=this.wechatList[i];
+                let data=this.wechatList[i];
+                this.wechatInfo.appId=data.appId;
+                this.wechatInfo.secret=data.secret;
+                this.wechatInfo.orgConn=data.orgConn;
+                this.wechatInfo.url=data.url;
+                this.wechatInfo.id=data.id;
+                this.wechatInfo.startime=data.startime;
                 LyWeInfoService.del(this.wechatInfo);
             }
         }
