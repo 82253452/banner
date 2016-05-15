@@ -94,6 +94,7 @@ public class ShiroConfiguration{
 
     private void loadShiroFilterChain(ShiroFilterFactoryBean shiroFilterFactoryBean) {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
+        filterChainDefinitionMap.put("/static/admin/index.html", "authc");
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/templates/**","anon");
         filterChainDefinitionMap.put("/static/**","anon");
