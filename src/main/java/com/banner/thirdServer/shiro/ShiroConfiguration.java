@@ -94,9 +94,10 @@ public class ShiroConfiguration{
 
     private void loadShiroFilterChain(ShiroFilterFactoryBean shiroFilterFactoryBean) {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
-        filterChainDefinitionMap.put("/**", "authc");
         filterChainDefinitionMap.put("/login", "anon");
         filterChainDefinitionMap.put("/templates/**","anon");
+        filterChainDefinitionMap.put("/static/**","anon");
+        filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
     }
 
@@ -116,8 +117,8 @@ public class ShiroConfiguration{
 
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(getDefaultWebSecurityManager(myShiroRealm));// 必须设置SecurityManager
-        shiroFilterFactoryBean.setLoginUrl("/login");// 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
-        shiroFilterFactoryBean.setSuccessUrl("/index"); // 登录成功后要跳转的连接
+        shiroFilterFactoryBean.setLoginUrl("/static/admin/login.html");// 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
+        shiroFilterFactoryBean.setSuccessUrl("/static/admin/index.html"); // 登录成功后要跳转的连接
         shiroFilterFactoryBean.setUnauthorizedUrl("/403");
         loadShiroFilterChain(shiroFilterFactoryBean);
         return shiroFilterFactoryBean;
