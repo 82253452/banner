@@ -18,13 +18,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
-* Created by yp on2016-04-21
-*/
+ * Created by yp on2016-04-21
+ */
 @Controller
 @RequestMapping("/lyWeInfo")
 public class LyWeInfoController {
-@Resource
-private LyWeInfoMapper lyWeInfoMapper;
+    @Resource
+    private LyWeInfoMapper lyWeInfoMapper;
     @Resource
     private WechatJobService wechatJobService;
 
@@ -53,7 +53,7 @@ private LyWeInfoMapper lyWeInfoMapper;
     @RequestMapping("/add")
     @ResponseBody
     private int add(@RequestBody LyWeInfo wechat){
-        if(StringUtils.isBlank(wechat.getId().toString())){
+        if(StringUtils.isBlank(wechat.getId()==null?"":wechat.getId().toString())){
             lyWeInfoMapper.insert(wechat);
         }else{
             lyWeInfoMapper.updateByPrimaryKey(wechat);
@@ -78,7 +78,7 @@ private LyWeInfoMapper lyWeInfoMapper;
     @RequestMapping("/getById")
     @ResponseBody
     private LyWeInfo getById(String id){
-    return lyWeInfoMapper.selectByPrimaryKey(id);
+        return lyWeInfoMapper.selectByPrimaryKey(id);
     }
 
 
