@@ -1,4 +1,4 @@
-/*
+package com.banner.thirdServer.shiro;/*
 package com.banner.thirdServer.security;
 
 import com.banner.model.User;
