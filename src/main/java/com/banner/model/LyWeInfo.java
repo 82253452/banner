@@ -3,21 +3,20 @@ package com.banner.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-
 /**
-* 基础信息
-*
-* @author yp
-* @since 2016-05-15
-*/
+ * 基础信息
+ *
+ * @author yp
+ * @since 2016-04-21
+ */
 @Table(name = "ly_we_info")
 public class LyWeInfo implements Serializable{
 
-@Transient
-private Integer page = 1;
+    @Transient
+    private Integer page = 1;
 
-@Transient
-private Integer rows = 10;
+    @Transient
+    private Integer rows = 10;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +30,7 @@ private Integer rows = 10;
     private String appId;
 
     @Column(name="Secret")
-    private String Secret;
+    private String secret;
 
     @Column(name="BaseURL")
     private String BaseURL;
@@ -83,12 +82,12 @@ private Integer rows = 10;
         this.appId=appId;
     }
 
-    public String getSecret(){
-        return Secret;
+    public String getSecret() {
+        return secret;
     }
 
-    public void setSecret(String Secret){
-        this.Secret=Secret;
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 
     public String getBaseURL(){
@@ -158,18 +157,18 @@ private Integer rows = 10;
 
 
     public Integer getPage() {
-    return page;
+        return page;
     }
 
     public void setPage(Integer page) {
-    this.page = page;
+        this.page = page;
     }
 
     public Integer getRows() {
-    return rows;
+        return rows;
     }
 
     public void setRows(Integer rows) {
-    this.rows = rows;
+        this.rows = rows;
     }
 }
