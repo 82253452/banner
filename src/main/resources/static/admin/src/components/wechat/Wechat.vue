@@ -39,6 +39,7 @@
                                    </thead>
                                    <tbody>
                                    <tr class="even gradeC" v-for="entity in wechatList">
+                                       <template v-if="$index<5">
                                        <td>
                                            {{entity.appId}}
                                        </td>
@@ -55,6 +56,7 @@
                                            <button type="button" class="btn btn-outline btn-default" @click="update($index)">更新</button>
                                            <button type="button" class="btn btn-outline btn-default" @click="delete($index)">删除</button>
                                        </td>
+                                           </template>
                                    </tr>
                                    </tbody>
                                </table>
@@ -171,9 +173,10 @@
             add(){
                 let wechat=this.wechatInfo
                 wechat.startime=wechat.hour+":"+wechat.minute+":00"
-                    LyWeInfoService.add(wechat,function (data) {
+                    LyWeInfoService.add(wechat,(data) =>{
                         if(data==1){
-                            $('#createModal').modal('hide')
+                            this.wechatList.splice(0,0,wechat)
+                           $('#createModal').modal('hide')
                         }
                     })
             },
@@ -187,7 +190,6 @@
                 this.wechatInfo.startime=data.startime;
                 this.wechatInfo.hour=data.startime.split(':')[0];
                 this.wechatInfo.minute=data.startime.split(':')[1];
-                console.info(this.wechatInfo)
                 $('#createModal').modal('show')
             },
             delete(i){
@@ -198,7 +200,11 @@
                 this.wechatInfo.url=data.url;
                 this.wechatInfo.id=data.id;
                 this.wechatInfo.startime=data.startime;
-                LyWeInfoService.del(this.wechatInfo);
+                LyWeInfoService.del(this.wechatInfo,(data) =>{
+                    if(data==1){
+                        this.wechatList.splice(i,1)
+                    }
+                });
             }
         }
     }
