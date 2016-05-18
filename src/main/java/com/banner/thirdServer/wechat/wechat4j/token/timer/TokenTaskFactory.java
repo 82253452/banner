@@ -3,6 +3,7 @@ package com.banner.thirdServer.wechat.wechat4j.token.timer;
 import com.banner.service.wechat.NetSpider;
 import com.banner.thirdServer.wechat.wechat4j.common.MediaTextPic;
 import com.banner.thirdServer.wechat.wechat4j.message.MassMsg;
+import com.banner.thirdServer.wechat.wechat4j.token.RedisToken;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -26,7 +27,7 @@ public class TokenTaskFactory implements Job {
         if(dataMap!=null&&!"".equals(dataMap.get("appId").toString())&&!"".equals(dataMap.get("secret").toString())){
             String appId=dataMap.get("appId").toString();
             String secret=dataMap.get("secret").toString();
-                new Tokens(appId,secret).install();
+                new RedisToken(appId,secret).install();
                 logger.info("更新token ："+appId);
         }
     }
