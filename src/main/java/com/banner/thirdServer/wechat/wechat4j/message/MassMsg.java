@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.banner.thirdServer.wechat.lang.HttpUtils;
 import com.banner.thirdServer.wechat.wechat4j.token.TokenProxy;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
+import com.banner.util.RedisUtil;
 import net.sf.json.JSONObject;
 
 /**
@@ -40,7 +41,7 @@ public class MassMsg {
      * @return
      */
     private String uploadUrl(){
-        String url = URL + Tokens.tockenMap.get(appId);
+        String url = URL + RedisUtil.getString(appId);
         return url;
     }
     private String respon(String result){
