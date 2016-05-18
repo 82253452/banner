@@ -17,7 +17,7 @@ public class RedisToken {
     private static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential";
     private String appId;
     private String secret;
-    private Integer time = 100;
+    private Integer time = 60*60;
     @Resource
     private TaskUtils taskUtils;
 
