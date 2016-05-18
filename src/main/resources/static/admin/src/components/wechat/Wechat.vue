@@ -39,7 +39,6 @@
                                    </thead>
                                    <tbody>
                                    <tr class="even gradeC" v-for="entity in wechatList">
-                                       <template v-if="$index<5">
                                        <td>
                                            {{entity.appId}}
                                        </td>
@@ -54,9 +53,8 @@
                                        </td>
                                        <td>
                                            <button type="button" class="btn btn-outline btn-default" @click="update($index)">更新</button>
-                                           <button type="button" class="btn btn-outline btn-default" @click="delete($index)">删除</button>
+                                           <button type="button" class="btn btn-outline btn-default" @click="del($index)">删除</button>
                                        </td>
-                                           </template>
                                    </tr>
                                    </tbody>
                                </table>
@@ -64,11 +62,10 @@
                        </div>
                        <div class="row">
                            <div class="col-lg-6">
-                               <pre class="card card-block card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
+                               <pre class="card card-block card-header">Page: {{page.pageNum}} / {{page.pageTotal}}</pre>
                            </div>
                            <div class="col-lg-6">
-                               <pagination [totalItems]="bigTotalItems" v-model="bigCurrentPage" [maxSize]="maxSize"
-                                           [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event" (pageChanged)="pageChanged($event)"></pagination>
+                               <pagination :page="page"></pagination>
                            </div>
                        </div>
                    </div>
@@ -135,6 +132,7 @@
 <script>
     import Vue from 'vue'
     import LyWeInfoService from '../../service/base/LyWeInfoService.js'
+    import Pagination from '../page/Pagination.vue'
     export default {
         data(){
             return {
@@ -147,16 +145,31 @@
                     startime:'',
                     hour:'',
                     minute:''
+                },
+                page:{
+                    pageNum:1,
+                    pageSize:10,
+                    pageTotal:1
                 }
             }
         },
+        components: { Pagination },
         ready(){
-            var _self = this;
-            LyWeInfoService.List(function (res) {
-                _self.wechatList=res
-            })
+            this.pageList(1)
+        },
+        events: {
+            'page-nextPage': function (msg) {
+                this.pageList(msg)
+            }
         },
         methods:{
+            pageList(pageNum){
+                LyWeInfoService.pageList({pageNum,pageNum},(res) =>{
+                    this.page.pageNum=res.pageNum
+                this.page.pageTotal=res.pages
+                this.wechatList=res.list
+            })
+            },
             showCreate(){
                 this.wechatInfo={
                         appId:'',
@@ -175,7 +188,8 @@
                 wechat.startime=wechat.hour+":"+wechat.minute+":00"
                     LyWeInfoService.add(wechat,(data) =>{
                         if(data==1){
-                            this.wechatList.splice(0,0,wechat)
+                            /*this.wechatList.splice(0,0,wechat)*/
+                            this.pageList(this.page.pageNum);
                            $('#createModal').modal('hide')
                         }
                     })
@@ -192,7 +206,7 @@
                 this.wechatInfo.minute=data.startime.split(':')[1];
                 $('#createModal').modal('show')
             },
-            delete(i){
+            del(i){
                 let data=this.wechatList[i];
                 this.wechatInfo.appId=data.appId;
                 this.wechatInfo.secret=data.secret;
@@ -202,7 +216,8 @@
                 this.wechatInfo.startime=data.startime;
                 LyWeInfoService.del(this.wechatInfo,(data) =>{
                     if(data==1){
-                        this.wechatList.splice(i,1)
+                        /*this.wechatList.splice(i,1)*/
+                    this.pageList(this.page.pageNum);
                     }
                 });
             }
