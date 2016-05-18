@@ -5,6 +5,7 @@ import com.banner.model.LyWeInfo;
 import com.banner.service.wechat.WechatTaskFactory;
 import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.quartz.TaskUtils;
+import com.banner.thirdServer.wechat.wechat4j.token.RedisToken;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import com.banner.thirdServer.wechat.wechat4j.token.timer.TokenTaskFactory;
 import org.apache.commons.lang3.StringUtils;
@@ -47,7 +48,7 @@ public class WechatListener implements ServletContextListener {
             job.setDesc(w.getUrl());
             taskUtils.addJob(job, WechatTaskFactory.class, dataMap);
             //tocken 定时器 2个小时执行一次
-            String tocken= new Tokens(w.getAppId(),w.getSecret()).install();
+           /* String tocken= new RedisToken(w.getAppId(),w.getSecret()).install();
             logger.info("jobId："+job.getJobId()+"jobCronExp："+job.getCronExpression()+"jobName："+job.getJobName()+"jobGroup："+job.getJobGroup());
             if(StringUtils.isNotBlank(tocken)){
                 ScheduleJob jobToken = new ScheduleJob();
@@ -60,7 +61,7 @@ public class WechatListener implements ServletContextListener {
                 taskUtils.addJob(jobToken, TokenTaskFactory.class, dataMap);
                 logger.info("jobId:："+jobToken.getJobId()+"jobCronExp："+jobToken.getCronExpression()+"jobName："+jobToken.getJobName()+"jobGroup："+jobToken.getJobGroup());
 
-            }
+            }*/
         }
         logger.info("定时器完成");
     }
