@@ -1,6 +1,11 @@
 import Common from '../../common/Common.js'
 
 export default {
+    pageList(param,fun){
+        return Common.post("/lyWeInfo/pageList",param,function (res) {
+            fun(res);
+        });
+    },
     List(fun){
         return Common.post("/lyWeInfo/list",{},function (res) {
              fun(res);
