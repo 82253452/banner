@@ -3,6 +3,7 @@ package com.banner.thirdServer.wechat.wechat4j.common;
 import com.banner.thirdServer.wechat.lang.HttpUtils;
 import com.banner.thirdServer.wechat.wechat4j.token.TokenProxy;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
+import com.banner.util.RedisUtil;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
@@ -75,7 +76,7 @@ public abstract class CommonMedia {
         }
     }
     public String getToken(){
-        return Tokens.tockenMap.get(appId);
+        return RedisUtil.getString(appId);
     }
     /**
      * 文件下载
