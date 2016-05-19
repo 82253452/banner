@@ -32,6 +32,7 @@
                                    <tr>
                                        <th>微信 appId</th>
                                        <th>微信 Secret</th>
+                                       <th>数量</th>
                                        <th>启动时间</th>
                                        <th>状态</th>
                                        <th>操作</th>
@@ -44,6 +45,9 @@
                                        </td>
                                        <td>
                                            {{entity.secret}}
+                                       </td>
+                                       <td>
+                                           {{entity.num}}
                                        </td>
                                        <td>
                                            {{entity.startime}}
@@ -92,6 +96,10 @@
                     <div class="form-group">
                         <label>Secret</label>
                         <input class="form-control" v-model="wechatInfo.secret" ngControl="secret" required>
+                    </div>
+                    <div class="form-group">
+                        <label>数量</label>
+                        <input class="form-control" v-model="wechatInfo.num" ngControl="num" required>
                     </div>
                     <div class="form-group">
                         <label>域名</label>
@@ -144,7 +152,8 @@
                     url:'',
                     startime:'',
                     hour:'',
-                    minute:''
+                    minute:'',
+                    num:''
                 },
                 page:{
                     pageNum:1,
@@ -179,7 +188,8 @@
                         id:'',
                         startime:'',
                         hour:'',
-                        minute:''
+                        minute:'',
+                        num:''
                 }
                 $('#createModal').modal('show')
             },
@@ -201,6 +211,7 @@
                 this.wechatInfo.orgConn=data.orgConn;
                 this.wechatInfo.url=data.url;
                 this.wechatInfo.id=data.id;
+                this.wechatInfo.num=data.num;
                 this.wechatInfo.startime=data.startime;
                 this.wechatInfo.hour=data.startime.split(':')[0];
                 this.wechatInfo.minute=data.startime.split(':')[1];
@@ -213,6 +224,7 @@
                 this.wechatInfo.orgConn=data.orgConn;
                 this.wechatInfo.url=data.url;
                 this.wechatInfo.id=data.id;
+                this.wechatInfo.num=data.num;
                 this.wechatInfo.startime=data.startime;
                 LyWeInfoService.del(this.wechatInfo,(data) =>{
                     if(data==1){

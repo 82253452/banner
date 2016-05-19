@@ -17,13 +17,16 @@ public class UploadMediaTask extends RecursiveTask<Elements> {
     private Elements lisImg;
     private Element img;
     private String appId;
-    UploadMediaTask(Elements lisImg,String appId){
+    private String secret;
+    UploadMediaTask(Elements lisImg,String appId,String secret){
         this.appId=appId;
         this.lisImg=lisImg;
+        this.secret=secret;
     }
-    UploadMediaTask(Element img,String appId){
+    UploadMediaTask(Element img,String appId,String secret){
         this.img=img;
         this.appId=appId;
+        this.secret=secret;
     }
     @Override
     protected Elements compute() {
@@ -33,7 +36,7 @@ public class UploadMediaTask extends RecursiveTask<Elements> {
             if(file==null){
                 return result;
             }
-            MediaContentFile mediaContentFile = new MediaContentFile(appId);
+            MediaContentFile mediaContentFile = new MediaContentFile(appId,secret);
             String contentUrl = mediaContentFile.upload(file, MediaType.image);
             if (contentUrl == null) {
                 img.attr("src", "");
@@ -44,7 +47,7 @@ public class UploadMediaTask extends RecursiveTask<Elements> {
             result.add(img);
         }else{
             for(Element imgChild:lisImg){
-                UploadMediaTask contentTask=  new UploadMediaTask(imgChild,appId);
+                UploadMediaTask contentTask=  new UploadMediaTask(imgChild,appId,secret);
                 contentTask.fork();
                 Elements partImg=contentTask.join();
                 result.addAll(partImg);

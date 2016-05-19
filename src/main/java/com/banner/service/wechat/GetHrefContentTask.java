@@ -17,13 +17,16 @@ public class GetHrefContentTask extends RecursiveTask {
     private List<GraMaterialEntity> list;
     private GraMaterialEntity sourceChild;
     private String appId;
-    GetHrefContentTask(List<GraMaterialEntity> list,String appId){
+    private String secret;
+    GetHrefContentTask(List<GraMaterialEntity> list,String appId,String secret){
         this.list=list;
         this.appId=appId;
+        this.secret=secret;
     }
-    GetHrefContentTask(GraMaterialEntity sourceChild,String appId){
+    GetHrefContentTask(GraMaterialEntity sourceChild,String appId,String secret){
         this.sourceChild=sourceChild;
         this.appId=appId;
+        this.secret=secret;
     }
     @Override
     protected List<GraMaterialEntity> compute() {
@@ -31,14 +34,14 @@ public class GetHrefContentTask extends RecursiveTask {
         if(list==null){
             String content =HttpClientUtil.sendGetRequest(sourceChild.getContent_source_url(),"gbk");
             try {
-                sourceChild.setContent(NetSpider.paseContentHTML(content,"",appId));
+                sourceChild.setContent(NetSpider.paseContentHTML(content,"",appId,secret));
             } catch (IOException e) {
                 e.printStackTrace();
             }
             result.add(sourceChild);
         }else{
             for(GraMaterialEntity sourceChild:list){
-                GetHrefContentTask contentTask=  new GetHrefContentTask(sourceChild, appId);
+                GetHrefContentTask contentTask=  new GetHrefContentTask(sourceChild, appId,secret);
                 contentTask.fork();
                 List<GraMaterialEntity> resultChild= (List<GraMaterialEntity>) contentTask.join();
                 result.addAll(resultChild);
