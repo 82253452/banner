@@ -10,8 +10,9 @@ import java.io.File;
  * Created by admin on 2016/4/9.
  */
 public class MediaTextPic extends CommonMedia{
-    public MediaTextPic(String appId){
+    public MediaTextPic(String appId,String secret){
         super.appId=appId;
+        super.secret=secret;
     }
     public String upload(File file,MediaType type){
 

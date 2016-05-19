@@ -11,8 +11,9 @@ import java.io.File;
  */
 public class MediaContentFile extends CommonMedia{
 
-    public MediaContentFile(String appId){
+    public MediaContentFile(String appId,String secret){
         super.appId=appId;
+        super.secret=secret;
     }
 
     public String upload(File file,MediaType type){

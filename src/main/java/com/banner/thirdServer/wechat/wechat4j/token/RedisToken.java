@@ -17,7 +17,7 @@ public class RedisToken {
     private static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential";
     private String appId;
     private String secret;
-    private Integer time = 60*60;
+    private Integer time = 60 * 60;
     @Resource
     private TaskUtils taskUtils;
 
@@ -26,7 +26,7 @@ public class RedisToken {
         this.secret = secret;
     }
 
-    private String getToken(String appId) {
+    public String getToken(String appId) {
         String tocken = RedisUtil.getString(appId);
         if (tocken == null || "".equals(tocken)) {
             return install();

@@ -1,6 +1,7 @@
 package com.banner.thirdServer.wechat.wechat4j.common;
 
 import com.banner.thirdServer.wechat.lang.HttpUtils;
+import com.banner.thirdServer.wechat.wechat4j.token.RedisToken;
 import com.banner.thirdServer.wechat.wechat4j.token.TokenProxy;
 import com.banner.thirdServer.wechat.wechat4j.token.Tokens;
 import com.banner.util.RedisUtil;
@@ -28,6 +29,7 @@ public abstract class CommonMedia {
     public String createdTimestamp;//文件创建时间戳，上传之后返回
     public String url;//文件路径，上传永久素材之后返回
     public String appId;
+    public String secret;
     abstract  String upload(File file,MediaType type);
     /**
      * 文件上传url
@@ -76,7 +78,8 @@ public abstract class CommonMedia {
         }
     }
     public String getToken(){
-        return RedisUtil.getString(appId);
+         String tocken=new RedisToken(appId,secret).getToken(appId);
+        return tocken;
     }
     /**
      * 文件下载

@@ -13,8 +13,9 @@ import java.io.IOException;
  * Created by admin on 2016/4/9.
  */
 public class MediaPerFile extends CommonMedia{
-    public MediaPerFile(String appId){
+    public MediaPerFile(String appId,String secret){
         super.appId=appId;
+        super.secret=secret;
     }
     public String upload(File file,MediaType type){
         super.UPLOAD = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=";//永久素材

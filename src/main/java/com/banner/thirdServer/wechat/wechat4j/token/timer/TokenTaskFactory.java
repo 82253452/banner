@@ -27,7 +27,7 @@ public class TokenTaskFactory implements Job {
         if(dataMap!=null&&!"".equals(dataMap.get("appId").toString())&&!"".equals(dataMap.get("secret").toString())){
             String appId=dataMap.get("appId").toString();
             String secret=dataMap.get("secret").toString();
-                new RedisToken(appId,secret).install();
+                new RedisToken(appId,secret).getToken(appId);
                 logger.info("更新token ："+appId);
         }
     }
