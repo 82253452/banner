@@ -2,7 +2,7 @@ package com.banner.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
+import java.util.Date;
 /**
 * 基础信息
 *

@@ -1,8 +1,8 @@
-package com.banner.mapper;
+package  com.banner.mapper;
 
 import com.banner.model.LyServerInfo;
 import com.banner.util.MyMapper;
 
-public interface LyServerInfoMapper extends MyMapper<LyServerInfo> {
+public interface LyServerInfoMapper extends MyMapper<LyServerInfo>{
 
     }

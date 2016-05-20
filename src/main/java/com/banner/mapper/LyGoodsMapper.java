@@ -1,8 +1,8 @@
-package com.banner.mapper;
+package  com.banner.mapper;
 
 import com.banner.model.LyGoods;
 import com.banner.util.MyMapper;
 
-public interface LyGoodsMapper extends MyMapper<LyGoods> {
+public interface LyGoodsMapper extends MyMapper<LyGoods>{
 
     }

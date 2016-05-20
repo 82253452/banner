@@ -1,8 +1,8 @@
-package com.banner.mapper;
+package  com.banner.mapper;
 
 import com.banner.model.LyResUser;
 import com.banner.util.MyMapper;
 
-public interface LyResUserMapper extends MyMapper<LyResUser> {
+public interface LyResUserMapper extends MyMapper<LyResUser>{
 
     }

@@ -1,10 +1,8 @@
 package com.banner.model;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.io.Serializable;
-
+import java.util.Date;
 /**
 * 基础信息
 *
