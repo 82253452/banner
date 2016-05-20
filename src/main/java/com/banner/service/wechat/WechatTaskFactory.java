@@ -1,16 +1,12 @@
 package com.banner.service.wechat;
 
 import com.banner.mapper.LyWeInfoMapper;
-import com.banner.mapper.WechatMapper;
 import com.banner.model.LyWeInfo;
-import com.banner.model.Wechat;
-import com.banner.thirdServer.quartz.ScheduleJob;
 import com.banner.thirdServer.wechat.wechat4j.common.MediaTextPic;
 import com.banner.thirdServer.wechat.wechat4j.message.MassMsg;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
-import org.quartz.DisallowConcurrentExecution;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -18,7 +14,6 @@ import org.quartz.JobExecutionException;
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -51,17 +46,15 @@ public class WechatTaskFactory implements Job {
                 String mediaId = mediaTextPic.upload(jsonObject.toString());
                 if (mediaId != null) {
                     logger.info("上传图文素材成功 mediaId:" + mediaId);
-
-                   /* MassMsg massMsg=new MassMsg(mediaId,appId);
+                    MassMsg massMsg=new MassMsg(mediaId,appId);
                     String result=massMsg.send();
-                    logger.info("群发："+result);*/
-
+                    logger.info("群发："+result);
                 } else {
                     logger.info("上传图文素材失败");
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+             }
             logger.info("url :" + url + "article num :" + num.toString());
         }
     }
